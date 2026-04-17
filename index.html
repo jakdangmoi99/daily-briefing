@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>라미의 아침 브리핑 — 2026년 4월 17일</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f0f2f5; color: #1a1a1a; padding: 20px; max-width: 780px; margin: 0 auto; line-height: 1.6; }
+  .card { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  .header-card { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; text-align: center; padding: 32px 24px; border-radius: 16px; margin-bottom: 16px; }
+  .header-card h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
+  .header-card .date { font-size: 16px; opacity: 0.9; font-weight: 400; }
+  .dday-banner { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #fff; text-align: center; padding: 14px 20px; border-radius: 12px; margin-bottom: 16px; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; }
+  .section-title { font-size: 17px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .weather-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .weather-city { background: #f8fafc; border-radius: 12px; padding: 18px; }
+  .city-name { font-size: 14px; font-weight: 700; color: #64748b; margin-bottom: 8px; }
+  .condition-row { font-size: 15px; color: #475569; margin-bottom: 2px; font-weight: 600; }
+  .high-low { font-size: 14px; color: #1e293b; font-weight: 700; margin-bottom: 4px; }
+  .dust-badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  .dust-good { background: #dcfce7; color: #16a34a; }
+  .dust-normal { background: #dbeafe; color: #1d4ed8; }
+  .dust-bad { background: #ffedd5; color: #ea580c; }
+  .dust-worst { background: #fee2e2; color: #dc2626; }
+
+  .hourly-title { font-size: 13px; font-weight: 600; color: #94a3b8; margin: 10px 0 8px; }
+  .hourly-row { display: grid; grid-template-columns: repeat(8, 1fr); gap: 2px; }
+  .hourly-slot { display: flex; flex-direction: column; align-items: center; gap: 2px; background: #f8f9fa; border-radius: 8px; padding: 5px 1px; }
+  .hourly-time { font-size: 10px; color: #6b7280; font-weight: 600; }
+  .hourly-icon { font-size: 13px; line-height: 1; }
+  .hourly-temp { font-size: 11px; font-weight: 700; color: #1e293b; }
+  .hourly-precip { font-size: 10px; color: #3b82f6; font-weight: 500; }
+  .hourly-dust { font-size: 9px; font-weight: 600; padding: 1px 5px; border-radius: 10px; white-space: nowrap; }
+  .hourly-dust.dust-good { background: #dcfce7; color: #16a34a; }
+  .hourly-dust.dust-normal { background: #dbeafe; color: #1d4ed8; }
+  .hourly-dust.dust-bad { background: #ffedd5; color: #ea580c; }
+  .hourly-dust.dust-worst { background: #fee2e2; color: #dc2626; }
+
+  .weather-source { font-size: 11px; color: #b0b8c4; text-align: right; margin-top: 10px; }
+  .no-umbrella { background: #f0fdf4; border: 1px solid #bbf7d0; color: #16a34a; text-align: center; padding: 10px; border-radius: 10px; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+  .exchange-card { background: #f8fffe; border: 1px solid #d1fae5; border-radius: 12px; padding: 18px; }
+  .exchange-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .exchange-item { display: flex; align-items: center; gap: 10px; }
+  .exchange-flag { font-size: 28px; }
+  .exchange-label { font-size: 13px; color: #64748b; }
+  .exchange-value { font-size: 20px; font-weight: 700; color: #065f46; }
+  .schedule-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f1f5f9; }
+  .schedule-item:last-child { border-bottom: none; }
+  .schedule-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .dot-blue { background: #3b82f6; }
+  .dot-rose { background: #f43f5e; }
+  .dot-purple { background: #8b5cf6; }
+  .dot-sky { background: #0ea5e9; }
+  .schedule-cal { font-size: 11px; color: #94a3b8; font-weight: 600; text-transform: uppercase; }
+  .schedule-time { font-size: 13px; color: #64748b; font-weight: 500; }
+  .schedule-title { font-size: 15px; font-weight: 600; color: #1e293b; }
+  .dday-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f1f5f9; }
+  .dday-item:last-child { border-bottom: none; }
+  .dday-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 8px; min-width: 48px; text-align: center; flex-shrink: 0; }
+  .dday-urgent { background: #fee2e2; color: #dc2626; }
+  .dday-normal { background: #eff6ff; color: #1d4ed8; }
+  .dday-title { font-size: 14px; font-weight: 600; color: #1e293b; }
+  .dday-date { font-size: 12px; color: #94a3b8; }
+  .kbo-card { background: linear-gradient(135deg, #0c4a6e, #075985); color: #fff; border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 10px; }
+  .kbo-teams { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+  .kbo-info { font-size: 14px; opacity: 0.85; }
+  .kbo-broadcast { font-size: 13px; opacity: 0.7; margin-top: 6px; }
+  .kbo-week { background: #f1f5f9; border-radius: 10px; padding: 14px; font-size: 13px; color: #475569; line-height: 1.8; }
+  .notice-card { background: #fefce8; border: 1px solid #fde68a; border-radius: 10px; padding: 12px 16px; font-size: 13px; color: #92400e; text-align: center; margin-bottom: 12px; }
+  @media (max-width: 600px) {
+    .weather-grid, .exchange-grid { grid-template-columns: 1fr; }
+    .hourly-row { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="header-card">
+  <h1>라미의 아침 브리핑 ☁️</h1>
+  <div class="date">2026년 4월 17일 금요일</div>
+</div>
+
+<div class="dday-banner">클로드 Max 갱신 D-6</div>
+
+<div class="card" style="padding:0;">
+  <div class="no-umbrella">☀️ 오늘 비 소식 없어요. 우산 필요 없습니다!</div>
+</div>
+
+<div class="card">
+  <div class="section-title">🌤 오늘의 날씨</div>
+  <div class="weather-grid">
+    <div class="weather-city">
+      <div class="city-name">📍 서울 강남구</div>
+      <div class="condition-row">☁️ 흐림</div>
+      <div class="high-low">최고 16.9°C / 최저 9.6°C · <span class="dust-badge dust-good">미세먼지 좋음 20µg/m³</span></div>
+      <div class="hourly-title">시간대별 날씨</div>
+      <div class="hourly-row">
+        <div class="hourly-slot"><span class="hourly-time">07시</span><span class="hourly-icon">☁️</span><span class="hourly-temp">9.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 7</span></div>
+        <div class="hourly-slot"><span class="hourly-time">09시</span><span class="hourly-icon">☁️</span><span class="hourly-temp">11.8°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 10</span></div>
+        <div class="hourly-slot"><span class="hourly-time">11시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">14.0°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 15</span></div>
+        <div class="hourly-slot"><span class="hourly-time">13시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">15.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">15시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">16.7°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 29</span></div>
+        <div class="hourly-slot"><span class="hourly-time">17시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">16.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">19시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">13.8°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">21시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">11.7°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 31</span></div>
+      </div>
+    </div>
+    <div class="weather-city">
+      <div class="city-name">📍 경기 하남시</div>
+      <div class="condition-row">☁️ 흐림</div>
+      <div class="high-low">최고 17.7°C / 최저 10.1°C · <span class="dust-badge dust-good">미세먼지 좋음 20µg/m³</span></div>
+      <div class="hourly-title">시간대별 날씨</div>
+      <div class="hourly-row">
+        <div class="hourly-slot"><span class="hourly-time">07시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">10.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 7</span></div>
+        <div class="hourly-slot"><span class="hourly-time">09시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">12.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 10</span></div>
+        <div class="hourly-slot"><span class="hourly-time">11시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">15.0°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 15</span></div>
+        <div class="hourly-slot"><span class="hourly-time">13시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">17.2°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">15시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">17.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 29</span></div>
+        <div class="hourly-slot"><span class="hourly-time">17시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">17.0°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">19시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">14.2°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-good">좋음 24</span></div>
+        <div class="hourly-slot"><span class="hourly-time">21시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">11.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 31</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="weather-source">출처: Open-Meteo API (open-meteo.com)</div>
+</div>
+
+<div class="card">
+  <div class="section-title">💱 오늘의 환율</div>
+  <div class="exchange-card">
+    <div class="exchange-grid">
+      <div class="exchange-item">
+        <span class="exchange-flag">🇺🇸</span>
+        <div>
+          <div class="exchange-label">USD/KRW</div>
+          <div class="exchange-value">1,475.27원</div>
+        </div>
+      </div>
+      <div class="exchange-item">
+        <span class="exchange-flag">🇯🇵</span>
+        <div>
+          <div class="exchange-label">JPY/KRW</div>
+          <div class="exchange-value">929원</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-title">📅 오늘의 일정</div>
+  <div class="notice-card">⚠️ Google Calendar 연동이 업그레이드 중이어서 일정을 불러올 수 없습니다. 새 세션에서 다시 시도해 주세요.</div>
+</div>
+
+<div class="card">
+  <div class="section-title">📌 이번 주 주요 일정</div>
+  <div class="dday-item">
+    <span class="dday-badge dday-normal">D-2</span>
+    <div>
+      <div class="dday-title">MS365 갱신</div>
+      <div class="dday-date">4월 19일 (토) · 작당모의</div>
+    </div>
+  </div>
+  <div class="dday-item">
+    <span class="dday-badge dday-normal">D-6</span>
+    <div>
+      <div class="dday-title">클로드 Max 구독 갱신</div>
+      <div class="dday-date">4월 23일 (목)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="section-title">⚾ 롯데 자이언츠</div>
+  <div class="kbo-card">
+    <div class="kbo-teams">🦅 한화 vs 롯데 🔵</div>
+    <div class="kbo-info">🕐 오늘 4/17(금) 18:30 · 📍 사직야구장</div>
+    <div class="kbo-broadcast">📺 SPOTV2</div>
+  </div>
+  <div class="kbo-week">
+    📆 <b>이번 주 일정</b><br>
+    4/14 롯데 vs LG @ 잠실<br>
+    4/15 롯데 vs LG @ 잠실 · SPOTV<br>
+    4/16 롯데 vs LG @ 잠실 · SPOTV<br>
+    <b>4/17 한화 vs 롯데 @ 사직 18:30 · SPOTV2 ← 오늘</b><br>
+    4/18 한화 vs 롯데 @ 사직 17:00 · SPOTV2<br>
+    4/19 한화 vs 롯데 @ 사직 14:00 · SPOTV2
+  </div>
+</div>
+
+<p style="text-align:center; font-size:11px; color:#b0b8c4; margin-top:12px;">
+  조비스가 생성한 브리핑 · 2026.04.17 KST
+</p>
+
+</body>
+</html>
