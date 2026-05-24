@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" data-build-ts="2026-05-24 07:05 KST">
+<html lang="ko" data-build-ts="2026-05-25 07:05 KST">
 <head>
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
@@ -34,7 +34,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>라미의 아침 브리핑 — 2026년 5월 24일</title>
+<title>라미의 아침 브리핑 — 2026년 5월 25일</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; background: #f0f2f5; color: #1a1a1a; padding: 20px; max-width: 780px; margin: 0 auto; line-height: 1.6; }
@@ -43,6 +43,7 @@
   .header-card h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
   .header-card .date { font-size: 16px; opacity: 0.9; font-weight: 400; }
   .dday-banner { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: #fff; text-align: center; padding: 14px 20px; border-radius: 12px; margin-bottom: 16px; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; }
+  .holiday-banner { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; text-align: center; padding: 14px 20px; border-radius: 12px; margin-bottom: 16px; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; }
   .section-title { font-size: 17px; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
   .weather-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .weather-city { background: #f8fafc; border-radius: 12px; padding: 18px; }
@@ -88,6 +89,7 @@
   .dot-purple { background: #8b5cf6; }
   .dot-sky { background: #0ea5e9; }
   .dot-teal { background: #14b8a6; }
+  .dot-amber { background: #f59e0b; }
   .schedule-cal { font-size: 11px; color: #94a3b8; font-weight: 600; text-transform: uppercase; }
   .schedule-time { font-size: 13px; color: #64748b; font-weight: 500; }
   .schedule-title { font-size: 15px; font-weight: 600; color: #1e293b; }
@@ -118,7 +120,7 @@ body{padding-top:30px !important}
 </style>
 </head>
 <body>
-<div id="__topbar">📅 마지막 업데이트: 2026-05-24 07:05 KST</div>
+<div id="__topbar">📅 마지막 업데이트: 2026-05-25 07:05 KST</div>
 <script>
 (function(){
   var bar = document.getElementById('__topbar');
@@ -157,48 +159,52 @@ body{padding-top:30px !important}
 
 <div class="header-card">
   <h1>라미의 아침 브리핑 ☀️</h1>
-  <div class="date">2026년 5월 24일 일요일</div>
+  <div class="date">2026년 5월 25일 월요일</div>
 </div>
 
-<div class="dday-banner">🤖 클로드 Max 갱신 D-30 · 다음 결제 6/23(화)</div>
+<div class="dday-banner">🤖 클로드 Max 갱신 D-29 · 다음 결제 6/23(화)</div>
 
-<div class="card" style="padding:0;"><div class="no-umbrella">☀️ 우산 불필요 — 종일 강수 없음, 맑은 하늘 예상</div></div>
+<div class="holiday-banner">🪷 부처님오신날 대체공휴일 — 푹 쉬어가는 월요일</div>
 
-<div class="card" style="padding:0;"><div class="mask-alert">😷 저녁 마스크 권장 — 20시 이후 PM2.5 47~60µg/m³까지 상승 (나쁨)</div></div>
+<div class="card" style="padding:0;"><div class="no-umbrella">☀️ 우산 불필요 — 종일 비 거의 없음 (밤 23시 강수확률 31%로 살짝 올라감)</div></div>
+
+<div class="card" style="padding:0;"><div class="heat-alert">🌡 한낮 28~29°C 초여름 더위 — 자외선·열기 강함 (선크림·생수 준비)</div></div>
+
+<div class="card" style="padding:0;"><div class="mask-alert">😷 아침·저녁 마스크 권장 — 08시 이전 & 20시 이후 PM2.5 40~68µg/m³ (나쁨)</div></div>
 
 <div class="card">
   <div class="section-title">🌦 오늘의 날씨</div>
   <div class="weather-grid">
     <div class="weather-city">
       <div class="city-name">📍 서울 강남구</div>
-      <div class="condition-row">☀️ 맑음, 한낮 26°C 안팎</div>
-      <div class="high-low">최고 26.7°C / 최저 13.7°C · <span class="dust-badge dust-normal">미세먼지 보통 평균 35µg/m³</span></div>
+      <div class="condition-row">☁️ 흐린 뒤 한낮 맑음, 더위 본격화</div>
+      <div class="high-low">최고 28.8°C / 최저 15.6°C · <span class="dust-badge dust-bad">미세먼지 나쁨 평균 44µg/m³</span></div>
       <div class="hourly-title">시간대별 날씨</div>
       <div class="hourly-row">
-        <div class="hourly-slot"><span class="hourly-time">08시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">16.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 27</span></div>
-        <div class="hourly-slot"><span class="hourly-time">10시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">20.2°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
-        <div class="hourly-slot"><span class="hourly-time">12시</span><span class="hourly-icon">⛅</span><span class="hourly-temp">23.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
-        <div class="hourly-slot"><span class="hourly-time">14시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">25.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 23</span></div>
-        <div class="hourly-slot"><span class="hourly-time">16시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">26.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 24</span></div>
-        <div class="hourly-slot"><span class="hourly-time">18시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">26.3°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 30</span></div>
-        <div class="hourly-slot"><span class="hourly-time">20시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">21.9°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 47</span></div>
-        <div class="hourly-slot"><span class="hourly-time">22시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">19.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 61</span></div>
+        <div class="hourly-slot"><span class="hourly-time">08시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">19.3°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 40</span></div>
+        <div class="hourly-slot"><span class="hourly-time">10시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">23.9°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 27</span></div>
+        <div class="hourly-slot"><span class="hourly-time">12시</span><span class="hourly-icon">⛅</span><span class="hourly-temp">26.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 20</span></div>
+        <div class="hourly-slot"><span class="hourly-time">14시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">28.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 21</span></div>
+        <div class="hourly-slot"><span class="hourly-time">16시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">28.8°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
+        <div class="hourly-slot"><span class="hourly-time">18시</span><span class="hourly-icon">☁️</span><span class="hourly-temp">27.4°</span><span class="hourly-precip">2%</span><span class="hourly-dust dust-normal">보통 23</span></div>
+        <div class="hourly-slot"><span class="hourly-time">20시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">23.3°</span><span class="hourly-precip">4%</span><span class="hourly-dust dust-bad">나쁨 42</span></div>
+        <div class="hourly-slot"><span class="hourly-time">22시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">22.0°</span><span class="hourly-precip">18%</span><span class="hourly-dust dust-bad">나쁨 58</span></div>
       </div>
     </div>
     <div class="weather-city">
       <div class="city-name">📍 경기 하남시</div>
-      <div class="condition-row">☀️ 맑음, 한낮 27°C 안팎</div>
-      <div class="high-low">최고 27.5°C / 최저 13.6°C · <span class="dust-badge dust-normal">미세먼지 보통 평균 35µg/m³</span></div>
+      <div class="condition-row">☁️ 흐린 뒤 맑음, 한낮 29°C 안팎</div>
+      <div class="high-low">최고 29.3°C / 최저 16.3°C · <span class="dust-badge dust-bad">미세먼지 나쁨 평균 44µg/m³</span></div>
       <div class="hourly-title">시간대별 날씨</div>
       <div class="hourly-row">
-        <div class="hourly-slot"><span class="hourly-time">08시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">17.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 27</span></div>
-        <div class="hourly-slot"><span class="hourly-time">10시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">21.6°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
-        <div class="hourly-slot"><span class="hourly-time">12시</span><span class="hourly-icon">⛅</span><span class="hourly-temp">25.0°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
-        <div class="hourly-slot"><span class="hourly-time">14시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">26.7°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 23</span></div>
-        <div class="hourly-slot"><span class="hourly-time">16시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">27.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 24</span></div>
-        <div class="hourly-slot"><span class="hourly-time">18시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">26.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 30</span></div>
-        <div class="hourly-slot"><span class="hourly-time">20시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">23.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 47</span></div>
-        <div class="hourly-slot"><span class="hourly-time">22시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">19.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 61</span></div>
+        <div class="hourly-slot"><span class="hourly-time">08시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">20.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-bad">나쁨 40</span></div>
+        <div class="hourly-slot"><span class="hourly-time">10시</span><span class="hourly-icon">☀️</span><span class="hourly-temp">25.5°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 27</span></div>
+        <div class="hourly-slot"><span class="hourly-time">12시</span><span class="hourly-icon">☁️</span><span class="hourly-temp">28.4°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 20</span></div>
+        <div class="hourly-slot"><span class="hourly-time">14시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">29.1°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 21</span></div>
+        <div class="hourly-slot"><span class="hourly-time">16시</span><span class="hourly-icon">🌤</span><span class="hourly-temp">29.3°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 22</span></div>
+        <div class="hourly-slot"><span class="hourly-time">18시</span><span class="hourly-icon">☁️</span><span class="hourly-temp">27.8°</span><span class="hourly-precip">0%</span><span class="hourly-dust dust-normal">보통 23</span></div>
+        <div class="hourly-slot"><span class="hourly-time">20시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">23.8°</span><span class="hourly-precip">1%</span><span class="hourly-dust dust-bad">나쁨 42</span></div>
+        <div class="hourly-slot"><span class="hourly-time">22시</span><span class="hourly-icon">🌙</span><span class="hourly-temp">21.9°</span><span class="hourly-precip">10%</span><span class="hourly-dust dust-bad">나쁨 58</span></div>
       </div>
     </div>
   </div>
@@ -213,14 +219,14 @@ body{padding-top:30px !important}
         <span class="exchange-flag">🇺🇸</span>
         <div>
           <div class="exchange-label">USD/KRW</div>
-          <div class="exchange-value">1,517.04원</div>
+          <div class="exchange-value">1,516.19원</div>
         </div>
       </div>
       <div class="exchange-item">
         <span class="exchange-flag">🇯🇵</span>
         <div>
           <div class="exchange-label">JPY/KRW</div>
-          <div class="exchange-value">953원</div>
+          <div class="exchange-value">952원</div>
         </div>
       </div>
     </div>
@@ -230,21 +236,21 @@ body{padding-top:30px !important}
 <div class="card">
   <div class="section-title">📅 오늘의 일정</div>
   <div class="schedule-item">
-    <span class="schedule-dot dot-blue"></span>
+    <span class="schedule-dot dot-amber"></span>
     <div>
-      <div class="schedule-cal">라미</div>
+      <div class="schedule-cal">공휴일</div>
       <div class="schedule-time">종일</div>
-      <div class="schedule-title">🧑‍💻 취직 활동 (실업인정 D-4)</div>
-      <div class="schedule-note">구직활동 1회차 — 입사지원·면접·직업훈련 중 택일 수행</div>
+      <div class="schedule-title">🪷 부처님오신날 대체공휴일</div>
+      <div class="schedule-note">월요일 공식 휴일 — 한낮 28°C 초여름 날씨, 야외 활동 시 자외선·미세먼지 유의</div>
     </div>
   </div>
   <div class="schedule-item">
     <span class="schedule-dot dot-sky"></span>
     <div>
-      <div class="schedule-cal">KBO</div>
-      <div class="schedule-time">오후 2:00 ~ 5:00</div>
-      <div class="schedule-title">⚾ 삼성 vs 롯데 (홈 사직)</div>
-      <div class="schedule-note">사직야구장 · 중계 SPOTV2 — 한낮 26°C 맑음, 자외선 강함 (선크림·모자 준비)</div>
+      <div class="schedule-cal">참고</div>
+      <div class="schedule-time">—</div>
+      <div class="schedule-title">개인 일정 없음 (롯데 경기 없음 · 월요일 휴장)</div>
+      <div class="schedule-note">내일(화)부터 듀라셀 바이럴 시작 + 구직활동 2회차 일정 시작</div>
     </div>
   </div>
 </div>
@@ -252,42 +258,49 @@ body{padding-top:30px !important}
 <div class="card">
   <div class="section-title">📌 이번 주 · 다가오는 일정</div>
   <div class="dday-item">
-    <span class="dday-badge dday-urgent">D-2</span>
+    <span class="dday-badge dday-urgent">D-1</span>
     <div>
       <div class="dday-title">📢 듀라셀 바이럴 시작 + 🧑‍💻 취직 활동 (실업인정 D-2) + ⚾ LG vs 롯데 (홈)</div>
       <div class="dday-date">5월 26일 (화) · 바이럴 시작 / 구직활동 2회차 / 사직 18:30 · SPOTV2</div>
     </div>
   </div>
   <div class="dday-item">
-    <span class="dday-badge dday-normal">D-3</span>
+    <span class="dday-badge dday-normal">D-2</span>
     <div>
       <div class="dday-title">⚾ LG vs 롯데 (홈)</div>
       <div class="dday-date">5월 27일 (수) · 사직 18:30 · SPOTV2</div>
     </div>
   </div>
   <div class="dday-item">
-    <span class="dday-badge dday-normal">D-4</span>
+    <span class="dday-badge dday-urgent">D-3</span>
     <div>
       <div class="dday-title">📋 7차 실업인정 신청 (2회차) + ⚾ LG vs 롯데 (홈)</div>
       <div class="dday-date">5월 28일 (목) · 온라인 신청 (구직활동 2회 완료 후) / 사직 18:30 · SPOTV2</div>
     </div>
   </div>
   <div class="dday-item">
-    <span class="dday-badge dday-normal">D-5</span>
+    <span class="dday-badge dday-normal">D-4</span>
     <div>
       <div class="dday-title">💰 듀라셀 바이럴 인보이스 발행 + ⚾ 롯데 vs NC (원정)</div>
       <div class="dday-date">5월 29일 (금) · 인보이스 발행 / 창원NC파크 18:30 · SPOTV2</div>
     </div>
   </div>
   <div class="dday-item">
-    <span class="dday-badge dday-normal">D-7</span>
+    <span class="dday-badge dday-normal">D-5</span>
+    <div>
+      <div class="dday-title">⚾ 롯데 vs NC (원정)</div>
+      <div class="dday-date">5월 30일 (토) · 창원NC파크 17:00 · SPOTV2</div>
+    </div>
+  </div>
+  <div class="dday-item">
+    <span class="dday-badge dday-urgent">D-6</span>
     <div>
       <div class="dday-title">💰 캐스케이드 인보이스 + 📋 종합소득세 신고 마감 + ⚾ 롯데 vs NC (원정)</div>
       <div class="dday-date">5월 31일 (일) · Cascade 월간 인보이스 / 홈택스 전자신고 / 창원NC파크 14:00 · SPOTV2</div>
     </div>
   </div>
   <div class="dday-item">
-    <span class="dday-badge dday-normal">D-30</span>
+    <span class="dday-badge dday-normal">D-29</span>
     <div>
       <div class="dday-title">🤖 Claude MAX 다음 갱신</div>
       <div class="dday-date">6월 23일 (화) · 자동 결제</div>
@@ -297,22 +310,22 @@ body{padding-top:30px !important}
 
 <div class="card">
   <div class="section-title">⚾ 롯데 자이언츠</div>
-  <div class="kbo-card">
-    <div class="kbo-teams">⚾ 삼성 vs 롯데</div>
-    <div class="kbo-info">오늘(일) 14:00 · 홈 사직야구장</div>
-    <div class="kbo-broadcast">📺 중계: SPOTV2 · ☀️ 한낮 맑음 26°C, 자외선·열기 주의 (선크림·모자·생수)</div>
+  <div class="rest-card">
+    🛌 오늘(월) 경기 없음 — KBO 정규 휴장일<br>
+    내일 5/26(화)부터 LG와 사직 홈 3연전 시작
   </div>
   <div class="kbo-week">
     📆 <b>이번 주 일정</b><br>
-    5/24 (일) 삼성 vs 롯데 @ 사직 14:00 · SPOTV2 <b>← 오늘</b><br>
-    5/26~28 (화~목) LG vs 롯데 @ 사직 18:30 · SPOTV2<br>
-    5/29~30 (금~토) 롯데 vs NC @ 창원NC파크 (원정) · SPOTV2<br>
+    5/25 (월) <b>경기 없음 ← 오늘</b><br>
+    5/26~28 (화~목) LG vs 롯데 @ 사직 18:30 · SPOTV2 (홈 3연전)<br>
+    5/29 (금) 롯데 vs NC @ 창원NC파크 18:30 · SPOTV2<br>
+    5/30 (토) 롯데 vs NC @ 창원NC파크 17:00 · SPOTV2<br>
     5/31 (일) 롯데 vs NC @ 창원NC파크 14:00 · SPOTV2
   </div>
 </div>
 
 <p style="text-align:center; font-size:11px; color:#b0b8c4; margin-top:12px;">
-  조비스가 생성한 브리핑 · 2026.05.24 KST
+  조비스가 생성한 브리핑 · 2026.05.25 KST
 </p>
 
 </body>
